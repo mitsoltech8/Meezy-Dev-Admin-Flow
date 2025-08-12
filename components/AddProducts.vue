@@ -45,33 +45,7 @@
 
     </Card>
 
-    <!-- Add New Product Form -->
-    <Card v-if="showForm">
-      <CardHeader>
-        <CardTitle class="text-[#09090B] font-inter text-2xl font-semibold leading-8"
->Add New Product</CardTitle>
-        <CardDescription class="text-[#71717A] font-Inter text-sm font-normal leading-5"
->
-          Aşağıdan eklemek istediğiniz ürünün adını arayabilirsiniz.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div class="grid grid-cols-2 gap-6">
-          <Input class="font-inter w-full overflow-hidden text-ellipsis text-sm leading-normal font-normal border border-[#E4E4E7] rounded-md bg-white shadow-sm px-3 py-1 focus-visible:outline-none focus-visible:ring-0 " placeholder="Product Name" v-model="form.name" />
-          <Input  class="font-inter w-full overflow-hidden text-ellipsis text-sm leading-normal font-normal border border-[#E4E4E7] rounded-md bg-white shadow-sm px-3 py-1 focus-visible:outline-none focus-visible:ring-0 "  placeholder="Price" type="number" v-model="form.price" />
-          <Input  class="font-inter w-full overflow-hidden text-ellipsis text-sm leading-normal font-normal border border-[#E4E4E7] rounded-md bg-white shadow-sm px-3 py-1 focus-visible:outline-none focus-visible:ring-0 "  placeholder="Stock Quantity" type="number" v-model="form.stock" />
-          <Input  class="font-inter w-full overflow-hidden text-ellipsis text-sm leading-normal font-normal border border-[#E4E4E7] rounded-md bg-white shadow-sm px-3 py-1 focus-visible:outline-none focus-visible:ring-0 "  placeholder="SKU/Product Code" v-model="form.sku" />
-          <div class=" flex items-center justify-center h-36 cursor-pointer hover:bg-gray-50 font-inter w-full overflow-hidden text-ellipsis text-sm leading-normal font-normal border border-[#E4E4E7] rounded-md bg-white shadow-sm px-3 py-1 focus-visible:outline-none focus-visible:ring-0">
-            <span class="text-gray-500">+ Add Images</span>
-          </div>
-          <Textarea placeholder="Description" class="h-36 font-inter w-full overflow-hidden text-ellipsis text-sm leading-normal font-normal border border-[#E4E4E7] rounded-md bg-white shadow-sm px-3 py-1 focus-visible:outline-none focus-visible:ring-0" v-model="form.description" />
-        </div>
-      </CardContent>
-      <CardFooter class="flex justify-end space-x-2 border-t border-[#E4E4E7]">
-        <Button variant="outline" @click="showForm = false" class=" bg-[#F4F4F5]">Cancel</Button>
-        <Button @click="saveProduct">Save Product</Button>
-      </CardFooter>
-    </Card>
+    
   </div>
 </template>
 

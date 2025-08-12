@@ -36,11 +36,30 @@
             <input type="text" placeholder="Soyadınızı girin" />
           </div>
         </div>
-        <div class="form-field">
-          <label>National ID (TCID)</label>
-          <input type="text" placeholder="Enter your national ID number (e.g., 12345678901)" />
-        </div>
-      </div>
+        <div class="form-row">
+  <!-- Date of Birth Field -->
+  <div class="form-field">
+    <label>Doğum Tarihi</label>
+    <flat-pickr
+      v-model="form.dob"
+      :config="dateConfig"
+      placeholder="Doğum tarihinizi seçin"
+      class="w-full pl-11 pr-11 py-4 rounded-md border border-[#E4E4E7] bg-white text-[#18181B] font-inter text-base font-normal shadow-sm placeholder-[#71717A] focus:outline-none"
+    />
+  </div>
+
+  <!-- National ID Field -->
+  <div class="form-field">
+    <label>National ID (TCID)</label>
+    <input
+      type="text"
+      placeholder="Enter your national ID number (e.g., 12345678901)"
+      class="w-full pl-11 pr-11 py-4 rounded-md border border-[#E4E4E7] bg-white text-[#18181B] font-inter text-base font-normal shadow-sm placeholder-[#71717A] focus:outline-none"
+    />
+  </div>
+</div>
+
+    </div>
 
       <!-- 2. Hesap Bilgileri -->
       <div class="form-group">
@@ -122,5 +141,25 @@ function handleImageUpload(e) {
 
 function submitForm() {
   console.log('Form submitted')
+}
+</script>
+<script>
+import flatPickr from 'vue-flatpickr-component'
+import 'flatpickr/dist/flatpickr.css'
+
+export default {
+  components: { flatPickr },
+
+  data() {
+    return {
+      form: {
+        dob: null, // Default value for Date of Birth
+        nationalId: '' // Agar tum National ID bhi bind karna chahte ho
+      },
+      dateConfig: {
+        dateFormat: "d-m-y"
+      }
+    }
+  }
 }
 </script>

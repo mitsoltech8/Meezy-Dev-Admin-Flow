@@ -4,7 +4,7 @@
     <Sidebar class="bg-gray-900 text-black w-64">
       <SidebarContent class="flex h-full flex-col">
           <!-- HEADER: Logo -->
-  <SidebarHeader class="flex items-center justify-center py-[20px]">
+  <SidebarHeader class="flex items-start justify-center py-[20px]">
     <a href="/" class="flex items-center gap-2">
      
         <span class="logo-svg"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -208,6 +208,11 @@ const user = {
 /* optional: subtle popup shadow like screenshot */
 :deep(.dropdown-menu-content) {
   box-shadow: 0 10px 20px rgba(0,0,0,.25), 0 2px 6px rgba(0,0,0,.16);
+}
+li svg{
+  height: 16px;
+  color: #4B5563;
+  width: 16px;
 }
 </style>
 

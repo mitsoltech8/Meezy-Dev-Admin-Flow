@@ -1,18 +1,35 @@
 <template>
   <div class="flex justify-center">
-    <div class="flex h-screen font-sans bg-white overflow-hidden max-w-[1392px] w-full">
+    <div
+      class="flex flex-col-reverse lg:flex-row h-auto lg:h-screen font-sans bg-white overflow-hidden max-w-[1392px] w-full"
+    >
       <!-- Left side: Form -->
-      <div class="w-1/2 py-16 px-[100px] flex flex-col justify-center">
-        <h1 class="text-[#232323] font-roboto text-[36px] font-medium my-3">Kayıt Ol</h1>
-        <p class="text-[#969696] font-inter text-base font-normal mb-8">
+      <div
+        class="w-full lg:w-1/2 py-8 px-6 lg:py-16 lg:px-[100px] flex flex-col justify-center"
+      >
+        <h1
+          class="text-[#232323] font-roboto text-[28px] lg:text-[36px] font-medium my-3"
+        >
+          Kayıt Ol
+        </h1>
+        <p
+          class="text-[#969696] font-inter text-sm lg:text-base font-normal mb-8"
+        >
           Meezy'nin özelliklerinden faydalanmak için kaydolun
         </p>
 
         <!-- Alert -->
-        <div class="flex items-start border border-[#178C3A] bg-white rounded-lg py-3 px-4 mb-8 max-w-[500px] font-sans">
+        <div
+          class="flex items-start border border-[#178C3A] bg-white rounded-lg py-3 px-4 mb-8 max-w-full lg:max-w-[500px] font-sans"
+        >
           <div class="mr-3 mt-[3px]">
             <!-- SVG Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="none"
+            >
               <g clip-path="url(#clip0)">
                 <path
                   d="M8 5.333v2.667M8 10.667h.007M14.667 8A6.667 6.667 0 1 1 1.333 8 6.667 6.667 0 0 1 14.667 8Z"
@@ -38,7 +55,10 @@
         <form @submit.prevent="handleRegister" class="space-y-6">
           <!-- Full Name -->
           <div>
-            <label for="name" class="block text-[#18181B] font-inter text-sm font-medium mb-2">
+            <label
+              for="name"
+              class="block text-[#18181B] font-inter text-sm font-medium mb-2"
+            >
               Adınız Soyadınız
             </label>
             <input
@@ -53,11 +73,20 @@
 
           <!-- Date of Birth -->
           <div>
-            <label for="dob" class="block text-[#18181B] font-inter text-sm font-medium mb-2">
+            <label
+              for="dob"
+              class="block text-[#18181B] font-inter text-sm font-medium mb-2"
+            >
               Doğum Tarihi
             </label>
             <div class="relative flex items-center">
-              <svg class="absolute left-3 text-[#71717A]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+              <svg
+                class="absolute left-3 text-[#71717A]"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="none"
+              >
                 <path
                   d="M5.333 1.333V4M10.667 1.333V4M2 6.667h12M5.333 9.333h.007M8 9.333h.007M10.667 9.333h.006M5.333 12h.007M8 12h.007M10.667 12h.006M3.333 2.667h9.334A1.333 1.333 0 0 1 14 4v9.333a1.333 1.333 0 0 1-1.333 1.333H3.333A1.333 1.333 0 0 1 2 13.333V4A1.333 1.333 0 0 1 3.333 2.667Z"
                   stroke="#71717A"
@@ -77,7 +106,10 @@
 
           <!-- Email -->
           <div>
-            <label for="email" class="block text-[#18181B] font-inter text-sm font-medium mb-2">
+            <label
+              for="email"
+              class="block text-[#18181B] font-inter text-sm font-medium mb-2"
+            >
               E-posta Adresi
             </label>
             <input
@@ -92,7 +124,10 @@
 
           <!-- Password -->
           <div>
-            <label for="password" class="block text-[#18181B] font-inter text-sm font-medium mb-2">
+            <label
+              for="password"
+              class="block text-[#18181B] font-inter text-sm font-medium mb-2"
+            >
               Şifre
             </label>
             <div class="relative flex items-center">
@@ -135,7 +170,11 @@
                   stroke="currentColor"
                   width="16"
                 >
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"
+                  />
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -157,38 +196,43 @@
       </div>
 
       <!-- Right side: Image -->
-      <div class="w-3/5 flex items-center justify-center overflow-hidden p-3">
-        <img src="/reg.png" alt="Happy user" class="h-full w-full object-cover rounded-[24px]" />
-      </div>
+    <div class="w-full lg:w-3/5 flex items-center justify-center overflow-hidden p-3 sm:h-full md:h-full lg:h-full">
+  <img
+    src="/reg.png"
+    alt="Happy user"
+    class="h-full w-full object-cover rounded-[24px]"
+  />
+</div>
+
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import FlatPickr from 'vue-flatpickr-component'
-import 'flatpickr/dist/flatpickr.css'
+import { ref } from "vue";
+import FlatPickr from "vue-flatpickr-component";
+import "flatpickr/dist/flatpickr.css";
 
 const form = ref({
-  name: '',
-  dob: '',
-  email: '',
-  password: ''
-})
+  name: "",
+  dob: "",
+  email: "",
+  password: "",
+});
 
-const showPassword = ref(false)
+const showPassword = ref(false);
 
 function togglePassword() {
-  showPassword.value = !showPassword.value
+  showPassword.value = !showPassword.value;
 }
 
 function handleRegister() {
-  console.log('Form Submitted:', form.value)
-  alert(`Kayıt başarılı: ${form.value.name}`)
+  console.log("Form Submitted:", form.value);
+  alert(`Kayıt başarılı: ${form.value.name}`);
 }
 
 const dateConfig = {
-  dateFormat: 'y-m-d',
-  allowInput: true
-}
+  dateFormat: "d-m-y",
+  allowInput: true,
+};
 </script>
