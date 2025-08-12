@@ -1,14 +1,39 @@
 <template>
   <div class="side-bar">
     <!-- Sidebar -->
-      <SidebarProvider>
-    <AppSidebar />
-    <main class="main">
+  <SidebarProvider>
+  <AppSidebar />
+  <main class="main">
+    <!-- Top Bar -->
+    <div class="flex items-center gap-4 p-4 ">
+      <!-- Sidebar Trigger -->
       <SidebarTrigger />
-     <ProfileForm />
-      <slot />
-    </main>
-  </SidebarProvider>
+      
+<svg xmlns="http://www.w3.org/2000/svg" width="2" height="16" viewBox="0 0 2 16" fill="none">
+  <path d="M1 0.5V15.5" stroke="#E4E4E7"/>
+</svg>
+      <!-- Breadcrumb (shadcn-vue) -->
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">Satıcı Paneli</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/Ürünlerim">Ürünlerim</BreadcrumbLink>
+          </BreadcrumbItem>
+          
+          
+        </BreadcrumbList>
+      </Breadcrumb>
+    </div>
+
+    <!-- Content -->
+    <ProfileForm />
+    <slot />
+  </main>
+</SidebarProvider>
+
 
    
   </div>
@@ -18,6 +43,8 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import AppSidebar from "@/components/AppSidebar.vue";
 import ProfileForm from '~/components/Profile-form/ProfileForm.vue'
+import { LucideSeparatorVertical } from "lucide-vue-next";
+
 
 
 </script>
