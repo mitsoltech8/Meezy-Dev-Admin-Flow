@@ -46,7 +46,6 @@ import ProfileForm from '~/components/Profile-form/ProfileForm.vue'
 import { LucideSeparatorVertical } from "lucide-vue-next";
 
 
-
 </script>
 <style scoped>
 .side-bar{
