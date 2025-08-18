@@ -176,7 +176,7 @@ const items = [
     title: "Satışlarım", url: "#", icon: ShoppingCart,
     children: [{ title: "Aktif", url: "#" }, { title: "Tamamlanan", url: "#" }, { title: "İptal Edilen", url: "#" }]
   },
-  { title: "Ürünlerim", url: "#", icon: Package,
+  { title: "Ürünlerim", url: "/products", icon: Package,
     children: [{ title: "Satışta", url: "#" }, { title: "Onay Bekleyen", url: "#" }, { title: "Askıda", url: "#" }]
 },
   {

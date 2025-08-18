@@ -123,4 +123,13 @@
   body {
     @apply bg-background text-foreground;
   }
+  
 }
+.transfer-slect button{
+    width: -webkit-fill-available;
+    border-radius: 6px;
+border: 1px solid #E4E4E7;
+background: #FFF;
+box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+  }

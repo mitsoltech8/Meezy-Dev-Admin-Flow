@@ -19,6 +19,9 @@ module.exports = {
       fontFamily: {
         inter: ['Inter'],
       },
+       screens: {
+        xs: '430px', // custom breakpoint
+      },
     },
   },
   // baaki config...

@@ -5,11 +5,11 @@
 
     <div class="flex-1 p-6">
       <h1 class="text-2xl font-bold">Home Page</h1>
-      <NuxtLink to="/register">Go to Register</NuxtLink>
-      <br></br>
-      <NuxtLink to="/login">Go to Login</NuxtLink>
-         <br></br>
-      <NuxtLink to="/profile">Go to Profile</NuxtLink>
+     
+             <br></br>
+      <NuxtLink to="/products">Go to Product</NuxtLink>
+
+
     </div>
   </div>
 </template>
