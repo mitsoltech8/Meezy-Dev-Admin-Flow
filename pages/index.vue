@@ -9,6 +9,8 @@
              <br></br>
       <NuxtLink to="/products">Go to Product</NuxtLink>
 
+      <br></br>
+      <NuxtLink to="/payment">Go to Payments</NuxtLink>
 
     </div>
   </div>

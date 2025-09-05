@@ -133,3 +133,27 @@ background: #FFF;
 box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 
   }
+  /* ✅ Slide-in / out animation */
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.5s ease;
+}
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.product-filter>button:focus{
+  
+  outline: none;       
+  box-shadow: none; 
+}
+.product-filter>button:focus-visible{
+  box-shadow: none; 
+}
+.product-filter>button{
+  border-radius: 6px;
+border: 1px solid  #E4E4E7;
+background:#FFF;
+box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
